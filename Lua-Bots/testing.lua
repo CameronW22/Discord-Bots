@@ -171,13 +171,6 @@ client:on('messageCreate', function(message) --When a message is created in a ch
 
 	local args = message.content:split(" ") -- split all arguments into a table
 
-	--Haha, mature stuff
-	if message.guild.id == "653697946608467971" then
-		if string.match(message.content, "sex") or string.match(message.content, "hole") or string.match(message.content, "child") then
-			message:reply("<:cyrus:655079398835224617>")
-		end
-	end
-
 	--Attempting to make a reddit search system
 	if args[1]:sub(1, 2) == 'r/' then
 		coroutine.wrap(function()
